@@ -12,14 +12,12 @@ import { initializeCountries } from "../features/countries/countriesSlice";
 
 const Countries = () => {
   const dispatch = useDispatch();
-  const countriesList = useSelector((state) => state.countires.countires);
+  const countriesList = useSelector((state) => state.countries.countries);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     dispatch(initializeCountries());
   }, [dispatch]);
-
-  console.log("Search: ", search);
 
   // We will be replacing this with data from our API.
   const country = {

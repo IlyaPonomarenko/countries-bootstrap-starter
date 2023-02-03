@@ -4,7 +4,7 @@ import countriesAPI from "../../services/countriesAPI";
 export const countriesSlice = createSlice({
   name: "countries",
   initialState: {
-    countries: [],
+    countries: [""],
   },
   reducers: {
     getCountries(state, actions) {
